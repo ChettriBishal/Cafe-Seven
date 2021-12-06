@@ -120,7 +120,7 @@ a:hover{
 .hero-bg img{
 	transform: rotate(45deg);
 	height: 30rem;
-	margin-left: 7rem;
+	margin-left: -7rem;
 	margin-bottom: 0;
 	margin-top: 8rem;
 }
@@ -150,7 +150,7 @@ a:hover{
 .scroll{
 	position: absolute;
 	bottom: 2rem;
-	z-index: 2;
+	z-index: 1;
 }
 .scroll a{
 	color: var(--black);
@@ -254,3 +254,84 @@ footer .social svg{
 }
 
 /*Responsive design */
+@media (max-width: 375px){
+	/* Nav */
+	.nav-links{
+		position: fixed;
+		top: 0;
+		right: -250px;
+		height: 100vh;
+		width: 250px;
+		background: rgb(20,20,20);
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		z-index: 98;
+		transition: all ease-in-out 500ms;
+	}
+	.menu{
+		cursor: pointer;
+		background: var(--black);
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		z-index: 99;
+		position: fixed;
+		right: 2.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#check:checked ~ .nav-links{
+		right: 0;
+	}
+	/* Hero */
+	.hero .intro{
+		margin-bottom: 0;
+		display: flex;
+		flex-direction: column;
+		height: 90vh;
+		height: 90vh;
+		text-align: center;
+	}
+	.hero .intro h1{
+		font-size: 50px;
+	}
+	.hero .intro .h2{
+		font-size: 25px;
+	}
+	.hero-bg{
+		width: 32rem;
+		height: 12rem;
+		right: -13rem;
+		top: 14rem;
+		display: flex;
+		align-items: center;
+	}
+	.hero-bg img{
+		height: 14rem;
+		margin-left: -2.5rem;
+		margin-right: 1rem;
+	}
+	/*brands*/
+	.brands{
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 5rem;
+	}
+	.brands h2{
+		font-size: 25px;
+	}
+	.brands img{
+		height: 9rem;
+		margin-bottom: 2rem;
+	}
+	.brands .bottom-img{
+		right: -17rem;
+		bottom: -9rem;
+	}
+	/*Footer*/
+	footer p{
+		width: 80%;
+	}
+}
